@@ -8,7 +8,7 @@ PageTitle: |
     return string.IsNullOrWhiteSpace(siteTitle) ? title : (string.IsNullOrWhiteSpace(title) ? $"{siteTitle} | 首頁" : $"{siteTitle} | {title}");
   }
 SiteAuthor: Sonic Hub
-SiteAuthorTitle: C
+SiteAuthorTitle: Community
 SiteDescription: 是一個使用繁體中文交流的索尼克粉絲社群。
 PostSources: posts/*
 AllPosts: => Context.Outputs.FilterSources(Context.GetString("PostSources")).ToList()
