@@ -1,5 +1,5 @@
 MinimumStatiqWebVersion-CleanBlog: "1.0.0-beta.36"
-SiteTitle: 悠太翼官方網站
+SiteTitle: Sonic Hub 官方網站
 PageTitle: |
   =>
   {
@@ -7,9 +7,9 @@ PageTitle: |
     string title = GetString("Title");
     return string.IsNullOrWhiteSpace(siteTitle) ? title : (string.IsNullOrWhiteSpace(title) ? $"{siteTitle} | 首頁" : $"{siteTitle} | {title}");
   }
-SiteAuthor: 悠太翼
+SiteAuthor: Sonic Hub
 SiteAuthorTitle: VTuber / VCoder / VSinger
-SiteDescription: 為台灣個人勢 Vtuber、盔甲正太系程式 Vtuber，語言主要以中文為主，直播內容以程式、唱歌、遊戲、雜談為主。
+SiteDescription: 是一個使用繁體中文交流的索尼克粉絲社群。
 PostSources: posts/*
 AllPosts: => Context.Outputs.FilterSources(Context.GetString("PostSources")).ToList()
 IsPost: => Context.GetDocumentList("AllPosts").ContainsById(Document)
@@ -17,6 +17,6 @@ PageSources: pages/*
 AllPages: => Context.Outputs.FilterSources(Context.GetString("PageSources")).ToList()
 IsPage: => Context.GetDocumentList("AllPages").ContainsById(Document)
 AllTags: => Context.GetDocumentList("AllPosts").SelectMany(post => post.GetList<string>("Tags")).Distinct().ToList()
-GitHubOwner: "YuutaTsubasa"
-GitHubName: "yuutatsubasa.github.io"
+GitHubOwner: "SonicHubTW"
+GitHubName: "sonichubtw.github.io"
 GitHubToken: => Config.FromSetting<string>("GITHUB_TOKEN")

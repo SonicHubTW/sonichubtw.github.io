@@ -2,8 +2,8 @@
   .Factory
   .CreateWeb(args)
   .DeployToGitHubPages(
-        "YuutaTsubasa",
-        "yuutatsubasa.github.io",
+        "SonicHubTW",
+        "sonichubtw.github.io",
         Config.FromSetting<string>("GITHUB_TOKEN")
     )
   .RunAsync();
